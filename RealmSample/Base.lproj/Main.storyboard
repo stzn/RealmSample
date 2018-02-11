@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="RealmSample" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="aaS-bj-abE">
+                                <rect key="frame" x="0.0" y="260" width="375" height="407"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" id="e9J-Y0-7C0">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="e9J-Y0-7C0" id="sGy-EA-WVR">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="18" translatesAutoresizingMaskIntoConstraints="NO" id="d85-iW-ifX">
+                                <rect key="frame" x="8" y="20" width="359" height="80"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EM1-gD-Ck5">
+                                        <rect key="frame" x="0.0" y="0.0" width="76.5" height="80"/>
+                                        <state key="normal" title="All"/>
+                                        <connections>
+                                            <action selector="allTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="OLB-lR-h0n"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EYC-Na-pz5">
+                                        <rect key="frame" x="94.5" y="0.0" width="76" height="80"/>
+                                        <state key="normal" title="未成年"/>
+                                        <connections>
+                                            <action selector="under20Tapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="OYV-6i-NC2"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4tz-fq-cry">
+                                        <rect key="frame" x="188.5" y="0.0" width="76.5" height="80"/>
+                                        <state key="normal" title="25歳以上"/>
+                                        <connections>
+                                            <action selector="moreThan25Tapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="49O-oZ-TwW"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CEy-2c-CJR">
+                                        <rect key="frame" x="283" y="0.0" width="76" height="80"/>
+                                        <state key="normal" title="10~20歳"/>
+                                        <connections>
+                                            <action selector="betweenTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3Ne-bj-C4z"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="2fw-qR-27P"/>
+                                </constraints>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="18" translatesAutoresizingMaskIntoConstraints="NO" id="FDD-nZ-sd6">
+                                <rect key="frame" x="8" y="100" width="359" height="80"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nXO-9K-Tha">
+                                        <rect key="frame" x="0.0" y="0.0" width="70.5" height="80"/>
+                                        <state key="normal" title="鈴木さん"/>
+                                        <connections>
+                                            <action selector="equalSuzukiTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="mwb-E9-3j0"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2xv-OA-6m9">
+                                        <rect key="frame" x="88.5" y="0.0" width="87.5" height="80"/>
+                                        <state key="normal" title="鈴で始まる"/>
+                                        <connections>
+                                            <action selector="startSuzuTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="KwG-Bx-8eB"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dZm-A0-jLl">
+                                        <rect key="frame" x="194" y="0.0" width="87.5" height="80"/>
+                                        <state key="normal" title="藤で終わる"/>
+                                        <connections>
+                                            <action selector="endFujiTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="sdn-n7-ebd"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dSs-5O-gnM">
+                                        <rect key="frame" x="299.5" y="0.0" width="59.5" height="80"/>
+                                        <state key="normal" title="管理者"/>
+                                        <connections>
+                                            <action selector="adminTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="OiT-T9-HPd"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="6ar-uc-gBZ"/>
+                                </constraints>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="18" translatesAutoresizingMaskIntoConstraints="NO" id="TD9-Hy-bdf">
+                                <rect key="frame" x="0.0" y="180" width="375" height="80"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="Rwa-7N-OFq">
+                                        <rect key="frame" x="0.0" y="0.0" width="113" height="80"/>
+                                        <state key="normal">
+                                            <string key="title">鈴木さん
+２１歳</string>
+                                        </state>
+                                        <connections>
+                                            <action selector="equalSuzukiTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="RyU-HN-3JE"/>
+                                            <action selector="suzuki21Tapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="TJL-5L-lcC"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="rb1-zt-jmG">
+                                        <rect key="frame" x="131" y="0.0" width="113" height="80"/>
+                                        <state key="normal">
+                                            <string key="title">鈴木さん
+または25歳</string>
+                                        </state>
+                                        <connections>
+                                            <action selector="suzukiOr25:" destination="BYZ-38-t0r" eventType="touchUpInside" id="XcV-Gn-xKT"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="Eps-aq-vSL">
+                                        <rect key="frame" x="262" y="0.0" width="113" height="80"/>
+                                        <state key="normal" title="藤で終わらない"/>
+                                        <connections>
+                                            <action selector="notEndWithFujiTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="1dj-vG-RyJ"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="4EL-ex-jsP"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="FDD-nZ-sd6" secondAttribute="trailing" constant="8" id="7O1-3A-rJF"/>
+                            <constraint firstItem="d85-iW-ifX" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="892-hf-nKe"/>
+                            <constraint firstItem="TD9-Hy-bdf" firstAttribute="top" secondItem="FDD-nZ-sd6" secondAttribute="bottom" id="BSf-M1-Tu8"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="aaS-bj-abE" secondAttribute="bottom" id="Dhj-4L-eFk"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="d85-iW-ifX" secondAttribute="trailing" constant="8" id="Ms0-EZ-Lj9"/>
+                            <constraint firstItem="aaS-bj-abE" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="STr-9b-Ly6"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="aaS-bj-abE" secondAttribute="trailing" id="TBN-hm-A6v"/>
+                            <constraint firstItem="aaS-bj-abE" firstAttribute="top" secondItem="TD9-Hy-bdf" secondAttribute="bottom" id="gtn-4V-vHZ"/>
+                            <constraint firstItem="FDD-nZ-sd6" firstAttribute="top" secondItem="d85-iW-ifX" secondAttribute="bottom" id="mae-69-fev"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="TD9-Hy-bdf" secondAttribute="trailing" id="noY-QP-8bL"/>
+                            <constraint firstItem="TD9-Hy-bdf" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="o7t-6D-kgR"/>
+                            <constraint firstItem="d85-iW-ifX" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="8" id="q3s-xN-dva"/>
+                            <constraint firstItem="FDD-nZ-sd6" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="8" id="xa9-ZK-4LY"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="aaS-bj-abE" id="iYR-uC-78p"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4" y="127.28635682158921"/>
+        </scene>
+    </scenes>
+</document>
